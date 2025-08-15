@@ -1,0 +1,42 @@
+@import "tailwindcss";
+.auth-background {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-background__image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 553px;
+  height: 694px;
+  max-width: 45vw;
+  max-height: 100%;
+  object-fit: contain;
+  opacity: 0.6;
+  pointer-events: none;
+  display: none;
+}
+@media (min-width: 1024px) {
+  .auth-background__image {
+    display: block;
+  }
+}
+
+.auth-card {
+  position: relative;
+  padding: 2rem;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  z-index: 1;
+}

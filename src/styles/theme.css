@@ -1,0 +1,129 @@
+/* Personalización semántica para PrimeReact  */
+@import "tailwindcss";
+:root {
+  --primary-color: #8b5cf6; /* Tailwind purple-500 */
+  --primary-color-text: #ffffff;
+  --surface-ground: #f9fafb; /* Tailwind gray-50 */
+  --surface-section: #ffffff;
+  --surface-card: #ffffff;
+  --surface-overlay: #ffffff;
+  --surface-border: #e5e7eb; /* Tailwind gray-200 */
+  --text-color: #111827; /* Tailwind gray-900 */
+  --text-color-secondary: #6b7280; /* Tailwind gray-500 */
+  --header-bg: #6e519c;
+  --header-height: 56px;
+
+  --border-radius: 0.5rem;
+}
+
+.p-component {
+  font-family: inherit;
+}
+
+.p-button {
+  border-radius: var(--border-radius);
+}
+
+.p-card {
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos específicos para inputs de auth */
+.auth-input.p-inputtext {
+  background: #f3f3f3;
+  border: 1px solid #e5e7eb;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  transition: background 0.15s, border-color 0.15s, box-shadow 0.15s;
+}
+
+.auth-input.p-inputtext::placeholder {
+  color: #6b7280;
+}
+
+.auth-input.p-inputtext:focus {
+  outline: 2px solid transparent;
+  border-color: #6e519c;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.35);
+  background: #ffffff;
+}
+
+.auth-form-forgot {
+  font-size: 0.75rem;
+  color: #4b5563;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.auth-form-forgot:hover {
+  color: #1f2937;
+  text-decoration: underline;
+}
+
+.auth-submit.p-button {
+  width: 100%;
+  background: #6e519c;
+  border: 1px solid #6e519c;
+}
+
+.auth-submit.p-button:hover {
+  background: #6e519c;
+  border-color: #6e519c;
+}
+
+/* Botón peligro / acción destructiva */
+.btn-danger,
+.p-button-danger {
+  background: #ef4444; /* red-500 */
+  border-color: #ef4444;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.btn-danger:hover,
+.p-button-danger:hover,
+.btn-danger:focus,
+.p-button-danger:focus {
+  background: #dc2626; /* red-600 */
+  border-color: #dc2626;
+  color: #fff;
+}
+
+/* variante outline / texto peligro */
+.btn-danger-text {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+}
+.btn-danger-text:hover {
+  color: #dc2626;
+}
+
+/* Estilo específico para items de Menu que sean "danger" */
+.p-menu .p-menuitem.btn-danger-text > .p-menuitem-link {
+  color: #ef4444;
+}
+.p-menu .p-menuitem.btn-danger-text > .p-menuitem-link:hover {
+  color: #dc2626;
+  background: transparent;
+}
+
+/* Focus accesible para elementos interactivos (incluye avatar) */
+.app-header__avatar:focus,
+.p-button-danger:focus,
+.btn-danger:focus {
+  outline: 3px solid rgba(110, 81, 156, 0.18); /* resalta con el morado del header */
+  outline-offset: 2px;
+}
+
+/* utilidad para imagen avatar (si la usas desde markup) */
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 999px;
+}

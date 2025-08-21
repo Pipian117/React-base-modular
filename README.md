@@ -1,6 +1,6 @@
 # React + TypeScript + Vite
 
-# Tierra Spirits — Base React modular
+# Base React modular
 
 Plantilla base para aplicaciones React + TypeScript con arquitectura modular y herramientas listas para producción.
 

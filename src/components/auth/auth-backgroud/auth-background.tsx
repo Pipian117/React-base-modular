@@ -12,11 +12,6 @@ export function AuthBackground({ children }: AuthBackgroundProps) {
         w-full overflow-hidden bg-gray-50 px-4 py-6
       "
     >
-      <img
-        src="/images/f7e427c0a1fe7afcd0ed05276c60904d09a243eb.png"
-        alt="Agave"
-        className="auth-background__image"
-      />
       <div
         className="
           auth-card relative w-full max-w-[580px]
